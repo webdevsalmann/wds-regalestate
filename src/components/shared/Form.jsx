@@ -49,7 +49,7 @@ export default function Form() {
     // }
 
     return (
-        <form className="p-4 mt-6 mb-12 mx-auto w-11/12 md:w-1/2 flex flex-col gap-6 rounded-md">
+        <form className="p-4 mt-6 mx-auto w-11/12 md:w-1/2 flex flex-col gap-6 rounded-md">
             <div className="w-full grid gap-2 items-center">
                 <Label htmlFor="fullname">Full Name</Label>
                 <Input className="w-full" type="text" name="fullname" id="fullname" required />

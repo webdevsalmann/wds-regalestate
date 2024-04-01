@@ -34,6 +34,8 @@ export default function Header() {
   const path = usePathname();
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
 
+  if (path.includes("/studio")) return null
+
   return (
     <header className={`w-full bg-background md:border-none ${isNavbarOpen ? "border-b" : "border-none"}`}>
       <nav className="px-[5%] py-4 w-full grid grid-cols-2 justify-center items-center">
