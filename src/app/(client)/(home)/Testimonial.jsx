@@ -20,7 +20,7 @@ const testimonials = [
 
 export default function Testimonial() {
   return (
-    <section>
+    <section className="bg-yellow-50">
       <h2 className="text-center">Customer Testimonial</h2>
 
       <div className="mt-12 grid gap-8 md:grid-cols-3">

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -62,36 +63,53 @@
 }
 
 @layer components {
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "Lora", serif;
+  }
+
   h1 {
     @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
   }
-  
+
   h2 {
     @apply scroll-m-20 mt-16 mb-6 text-3xl font-semibold tracking-tight first:mt-0;
   }
-  
+
   h3 {
     @apply scroll-m-20 text-2xl font-semibold tracking-tight;
   }
-  
+
   h4 {
     @apply scroll-m-20 text-xl font-semibold tracking-tight;
   }
-  
+
   p {
     @apply leading-7 text-muted-foreground;
   }
-  
+
   section,
-  .section{
-    @apply px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-10 lg:px-12 lg:py-14;
+  .section {
+    @apply px-4 py-6 sm:px-8 sm:py-8 md:px-10 md:py-10 lg:px-14 lg:py-14;
   }
-  
+
   .flex-center {
     @apply flex justify-center items-center;
   }
 
   .flex-between {
     @apply flex justify-between items-center;
+  }
+
+  .font-lora {
+    font-family: "Lora", serif;
+  }
+
+  .bg-slant-lines {
+    opacity: 1;
+    background: repeating-linear-gradient(-45deg, #e9edf3, #e9edf3 2px, transparent 2px, transparent 5px);
   }
 }

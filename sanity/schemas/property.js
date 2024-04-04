@@ -24,6 +24,19 @@ export const property = defineType({
             type: 'string'
         },
         {
+            title: 'Slug',
+            name: 'slug',
+            type: 'slug',
+            options: {
+                source: 'address',
+                maxLength: 200, // will be ignored if slugify is set
+                slugify: input => input
+                    .toLowerCase()
+                    .replace(/\s+/g, '-')
+                    .slice(0, 200)
+            }
+        },
+        {
             name: 'city',
             title: 'City',
             type: 'string'
@@ -32,6 +45,27 @@ export const property = defineType({
             name: 'state',
             title: 'State',
             type: 'string'
+        },
+        {
+            name: 'property_type',
+            title: 'Property Type',
+            type: 'string',
+            options: {
+                list: [
+                    { title: "Residential", value: "residential" },
+                    { title: "Apartment", value: "apartment" },
+                    { title: "Condo", value: "condo" },
+                    { title: "Townhouse", value: "townhouse" },
+                    { title: "Single Family Home", value: "single_family_home" },
+                    { title: "Duplex", value: "duplex" },
+                    { title: "Villa", value: "villa" },
+                    { title: "Mobile Home", value: "mobile_home" },
+                    { title: "Multi-Family", value: "multi_family" },
+                    { title: "Commercial", value: "commercial" },
+                    { title: "Industrial", value: "industrial" },
+                    { title: "Land", value: "land" }
+                ]
+            }
         },
         {
             name: 'home_size',
@@ -68,7 +102,6 @@ export const property = defineType({
             title: 'Number of parking garage',
             type: 'number'
         },
-        // todo
         {
             name: 'status',
             title: 'Current Status',
@@ -78,14 +111,14 @@ export const property = defineType({
                     { title: "Available", value: "available" },
                     { title: "Rented", value: "rented" },
                     { title: "Sold", value: "sold" },
-                    { title: "Under Offer", value: "under_offer" },
+                    { title: "Under Offer", value: "under-offer" },
                     { title: "Pending", value: "pending" },
-                    { title: "Off Market", value: "off_market" },
-                    { title: "Coming Soon", value: "coming_soon" },
-                    { title: "Reduced Price", value: "reduced_price" },
+                    { title: "Off Market", value: "off-market" },
+                    { title: "Coming Soon", value: "coming-soon" },
+                    { title: "Reduced Price", value: "reduced-price" },
                     { title: "Expired", value: "expired" },
                     { title: "Withdrawn", value: "withdrawn" },
-                    { title: "Under Renovation", value: "under_renovation" },
+                    { title: "Under Renovation", value: "under-renovation" },
                     { title: "Foreclosure", value: "foreclosure" }
                 ]
             }

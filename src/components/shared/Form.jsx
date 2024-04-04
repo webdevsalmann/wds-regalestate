@@ -61,12 +61,17 @@ export default function Form() {
             </div>
 
             <div className="w-full grid gap-2 items-center">
-                <Label htmlFor="message">Message</Label>
+                <Label htmlFor="phonenumber">Mobile No.</Label>
+                <Input className="w-full" type="tel" name="phonenumber" id="phonenumber" required />
+            </div>
+
+            <div className="w-full grid gap-2 items-center">
+                <Label htmlFor="message">Message/Inquiry:</Label>
                 <Textarea className="w-full" name="message" id="message" placeholder="Type your message here." required />
             </div>
 
             {/* <Button className="w-fit mx-auto" variant="secondary" disabled={btnDisable}>{loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />} Send{loading && "ing"} </Button> */}
-            <Button className="w-fit mx-auto" variant="secondary" >Send Message</Button>
+            <Button className="w-fit mx-auto" >Send Message</Button>
         </form>
     )
 }

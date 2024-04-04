@@ -3,7 +3,8 @@ import Feature from "./Feature";
 import About from "./About";
 import FAQ from "./FAQ";
 import Testimonial from "./Testimonial";
-import Contact from "./Contact";
+import Sale from "./Sale";
+import Contact from "@/components/shared/Contact";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <About />
       <Feature />
       <FAQ />
+      {/* <Sale /> */}
       <Testimonial />
       <Contact />
     </main>

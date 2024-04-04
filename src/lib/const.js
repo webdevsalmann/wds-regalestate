@@ -1,6 +1,6 @@
 
 export const siteConfig = {
-  siteTitle: "Starter - Template",
-  siteName: "Starter File",
-  siteDescription: "This is the description for the starter file",
-}
+  siteTitle: "Regal Estate - Luxury Real Estate Services",
+  siteName: "Regal Estate",
+  siteDescription: "Discover Luxury Real Estate Services at Regal Estate",
+};

@@ -5,6 +5,7 @@ import { buttonVariants } from "@/components/ui/button"
 import { Ilogo } from '../svgs/svgs';
 import { AlignRight, X } from 'lucide-react';
 import { useState } from 'react';
+import { siteConfig } from '@/lib/const';
 
 const navigationLinks = [
   {
@@ -38,21 +39,21 @@ export default function Header() {
 
   return (
     <header className={`w-full bg-background md:border-none ${isNavbarOpen ? "border-b" : "border-none"}`}>
-      <nav className="px-[5%] py-4 w-full grid grid-cols-2 justify-center items-center">
+      <nav className="px-[5%] py-4 w-full grid grid-cols-4 justify-center items-center">
 
         {/* Logo */}
-        <Link className="w-fit flex-center" href="/">
-          <Ilogo className="size-14" />
+        <Link className="w-fit flex-center col-span-3 md:col-span-2" href="/">
+          <Ilogo className="size-10 md:size-14 text-primary" /> <span className='font-bold text-lg md:text-2xl font-lora'>{siteConfig.siteName}</span>
         </Link>
 
         {/* Hamburger menu */}
-        <div className="size-8 flex-center md:hidden justify-self-end"
+        <div className="size-8 flex-center md:hidden justify-self-end col-span-1 md:col-span-2"
           onClick={() => setIsNavbarOpen(!isNavbarOpen)}>
           {isNavbarOpen ? <X /> : <AlignRight />}
         </div>
 
         {/* Links */}
-        <ul className={`relative py-4 md:py-0 w-full md:w-fit flex-center flex-col gap-4   md:justify-self-end md:flex-row md:flex ${isNavbarOpen ? 'flex' : 'hidden'} col-span-2 md:col-span-1`}>
+        <ul className={`relative py-4 md:py-0 w-full md:w-fit flex-center flex-col gap-4   md:justify-self-end md:flex-row md:flex ${isNavbarOpen ? 'flex' : 'hidden'} col-span-4 md:col-span-2`}>
           {
             navigationLinks.map((item) => (
               <Link className={`${buttonVariants({ variant: item.varient, size: 'sm' })} ${path === item.path && "bg-accent"} capitalize text-muted-foreground`} href={item.path} key={item.title}>
