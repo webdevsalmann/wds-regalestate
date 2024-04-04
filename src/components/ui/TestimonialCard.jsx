@@ -14,7 +14,7 @@ export default function TestimonialCard({ testimonial, name, imageUrl }) {
                     <Star className="size-5 text-yellow-500" />
                 </div>
             </div>
-            <div className="p-4 font-semibold">"{testimonial}"</div>
+            <div className="p-4 font-semibold">&quot;{testimonial}&quot;</div>
             <div className="flex-center">
                 <Image
                     className="size-14 aspect-square object-cover rounded-full"

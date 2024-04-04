@@ -7,7 +7,7 @@ export default function Approach() {
       <div className="size-full flex-center">
         <div className="text-left">
           <h2 className="">Our Approach</h2>
-          <p>At Regal Estate, we believe in a personalized approach to real estate, tailoring our services to meet the unique needs and preferences of each client. Whether you're searching for your dream home, selling a prized property, or seeking expert advice on real estate investments, we are here to guide you every step of the way.</p>
+          <p>At Regal Estate, we believe in a personalized approach to real estate, tailoring our services to meet the unique needs and preferences of each client. Whether you&apos;re searching for your dream home, selling a prized property, or seeking expert advice on real estate investments, we are here to guide you every step of the way.</p>
         </div>
       </div>
       
