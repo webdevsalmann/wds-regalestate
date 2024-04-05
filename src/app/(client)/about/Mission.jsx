@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Mission() {
   return (
-    <section className="grid gap-12 grid-cols-2">
+    <section className="grid gap-12 md:grid-cols-2">
       {/* Details */}
       <div className="size-full flex-center">
         <div className="text-left">

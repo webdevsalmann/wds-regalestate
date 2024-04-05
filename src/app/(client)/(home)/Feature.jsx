@@ -19,7 +19,7 @@ export default async function Feature() {
   //   }
   // });
 
-  const filter = `*[_type=="property"]`;
+  const filter = `*[_type=="property" && status == "available"]`;
   const query = `${filter}{
     _id,
     slug,
@@ -36,10 +36,10 @@ export default async function Feature() {
 
   return (
     <section>
-      <h2 className="text-center">Featured Properties</h2>
+      <h2 className="text-center">Discover Our Premier Selection</h2>
 
       <div className="mt-12 grid gap-4 sm:grid-cols-2 sm:gap-6 md:grid-cols-3 ">
-        {properties?.slice(0, 6).map(property => (
+        {properties?.slice(0, 3).map(property => (
           <FeatureCard key={property._id} data={property} />
         ))}
       </div>

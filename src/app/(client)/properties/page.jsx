@@ -20,12 +20,12 @@ export default async function page({ searchParams }) {
   //     }
   //   }
   // });
-  
+
   const { status, search } = searchParams;
   const statusQuery = status && status !== 'all' ? ` && status == "${status}"` : '';
   const searchFilter = search ? ` && address match "${search}"` : '';
   const filter = `*[_type=="property"${statusQuery}${searchFilter}]`;
-  
+
   const query = `${filter}{
     _id,
     slug,
@@ -37,14 +37,17 @@ export default async function page({ searchParams }) {
     kitchen,
     home_size,
   }`;
-  
+
   const properties = await client.fetch(query);
-  
+
   return (
     <>
       <PropertiesFilter />
       <Properties data={properties} />
-      <Contact className='bg-muted' title='Inquire at any time' />
+      <Contact
+        className='bg-muted'
+        title='Connect with Us about Properties'
+        subTitle='Use the form below to inquire about available properties or schedule viewings.' />
     </>
   )
 }

@@ -21,7 +21,7 @@ const testimonials = [
 export default function Testimonial() {
   return (
     <section className="bg-yellow-50">
-      <h2 className="text-center">Customer Testimonial</h2>
+      <h2 className="text-center">Client Stories: <br /> Hear From Our Satisfied Customers</h2>
 
       <div className="mt-12 grid gap-8 md:grid-cols-3">
     {testimonials.map((item,i)=>(

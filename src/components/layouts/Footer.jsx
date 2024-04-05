@@ -12,7 +12,7 @@ export default function Footer() {
   if (path.includes("/studio")) return null
   return (
     <footer className="section bg-blue-950 text-neutral-100 border-t">
-      <div className="flex gap-8 flex-wrap justify-between">
+      <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
         {/* About this site */}
         <div className="flex gap-2 items-center self-start">
           <Ilogo className="size-10 md:size-14 text-primary" /> <span className='font-bold text-lg md:text-2xl font-lora'>{siteConfig.siteName}</span>
@@ -20,11 +20,11 @@ export default function Footer() {
 
         {/* Quick links */}
         <div className="">
-          <div className="mb-4 font-semibold">Quick links</div>
+          <div className="mb-2 text-lg font-semibold">Quick links</div>
           <ul className="list-inside">
-            <li><Link className="hover:underline" href="/properties">Properties</Link></li>
-            <li><Link className="hover:underline" href="/about">About</Link></li>
-            <li><Link className="hover:underline" href="/contact">Contact</Link></li>
+            <li><Link className="text-neutral-300 hover:underline" href="/properties">Properties</Link></li>
+            <li><Link className="text-neutral-300 hover:underline" href="/about">About</Link></li>
+            <li><Link className="text-neutral-300 hover:underline" href="/contact">Contact</Link></li>
           </ul>
         </div>
 

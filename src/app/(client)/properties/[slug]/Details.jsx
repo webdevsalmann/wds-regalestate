@@ -29,15 +29,15 @@ export default function Details({ data }) {
   };
 
   const iconClass = 'mr-4 size-5 inline';
-  const titleClass = "font-medium capitalize";
-  const descriptionClass = "font-medium text-right capitalize";
+  const titleClass = "w-1/2 font-medium capitalize ";
+  const descriptionClass = "w-full font-medium text-right capitalize";
 
   return (
     <section className='pt-0 sm:pt-0 md:pt-0 lg:pt-0 mx-auto sm:w-3/5'>
       <h2 className='mb-0'>Details About This Property at <span className='text-primary'>{address}</span></h2>
       <PortableText value={description} />
 
-      <Table className='my-12 font-semibold text-lg'>
+      <Table className='my-12 font-semibold text-lg' >
         <TableBody>
           {/* Address */}
           <TableRow className="bg-slant-lines">
@@ -108,7 +108,7 @@ export default function Details({ data }) {
           {/* Amenities */}
           <TableRow>
             <TableCell className={titleClass}><ThumbsUp className={iconClass} />Amenities</TableCell>
-            <TableCell className={`${descriptionClass} flex flex-row-reverse gap-2 flex-wrap text-sm`}>
+            <TableCell className={`${descriptionClass} w-full flex flex-row-reverse gap-2 flex-wrap text-sm`}>
               {amenities?.map((item, i) => (
                 <span className='px-1 bg-gray-200 rounded capitalize' key={_id + i}>{item}</span>
               ))}

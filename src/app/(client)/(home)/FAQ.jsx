@@ -36,7 +36,7 @@ const faqs = [
 export default function FAQ() {
   return (
     <section className="bg-blue-950 text-neutral-50">
-      <h2 className="text-center">Frequently Asked Questions</h2>
+      <h2 className="text-center">Answers to Your Questions</h2>
 
       <div className="mx-auto w-full md:w-3/4 lg:w-1/2">
         <Accordion type="single" collapsible>

@@ -44,7 +44,7 @@ export default function PropertiesFilter() {
 
     return (
         <section className="py-0 sm:py-0 md:py-0 lg:py-0 border-b">
-            <h2 className="text-center">Get all the properties that you like</h2>
+            <h2 className="text-center">Explore Our Properties</h2>
 
             {/* Search Box */}
             <div className="mx-auto w-full md:w-2/3">
@@ -75,26 +75,6 @@ export default function PropertiesFilter() {
                     ))}
                 </div>
             </div>
-
-            {/* <div className="my-4 flex-between items-center"> */}
-            {/* Property Count */}
-            {/* <div className="text-xl font-bold tracking-tight sm:text-2xl">0 Property</div> */}
-
-            {/* Filter Select */}
-            {/* <Select onValueChange={value => router.replace(value)}>
-                    <SelectTrigger className="w-[180px]">
-                        <Filter className="size-5" />
-                        <SelectValue placeholder="Filter Properties" />
-                    </SelectTrigger>
-                    <SelectContent>
-                        {filterOptions.map(item => (
-                            <SelectItem value={item.value} key={item.title} >
-                                {item.title}
-                            </SelectItem>
-                        ))}
-                    </SelectContent>
-                </Select> */}
-            {/* </div> */}
         </section >
     )
 }
